@@ -11,7 +11,7 @@ RSpec.describe Person do
       city: 'Atlanta'
     }
   end
-  before(:each) do 
+  before(:each) do
     @person = Person.new(params)
   end
   describe '#initialize' do
@@ -25,7 +25,7 @@ RSpec.describe Person do
       expect(@person.to_s).to eq("#{params[:firstname]}, Atlanta, 1/1/2001")
     end
     context 'when city is a shortname' do
-      before do 
+      before do
         @person = Person.new(params.merge(city: 'NYC'))
       end
       it 'returns person string with full city name' do

@@ -16,12 +16,12 @@ RSpec.describe PeopleRepository do
         lastname: 'Doen',
         birthdate: '1-1-2001',
         city: 'Atlanta'
-      },
-      
+      }
+
     ]
   end
-  before(:each) do 
-    @people = params.map{|person_params|Person.new(person_params)}
+  before(:each) do
+    @people = params.map { |person_params| Person.new(person_params) }
   end
   describe '#sort_by_firstname' do
     it 'should sort array of Persons by firstname' do

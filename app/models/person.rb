@@ -17,7 +17,9 @@ class Person
   def to_s
     "#{firstname}, #{full_city_name}, #{formatted_birthdate}"
   end
+
   private
+
   attr_reader :lastname, :city, :birthdate
 
   def formatted_birthdate
