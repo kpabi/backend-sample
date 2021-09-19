@@ -10,11 +10,14 @@ class PeopleController
     people.push(*People::DollarParser.new(params[:dollar_format]).parse)
     people.push(*People::PercentParser.new(params[:percent_format]).parse)
 
-    people.map(&:to_s)
+    sort_people_by_firstname.map(&:to_s)
   end
 
   private
 
   attr_reader :params, :people
 
+  def sort_people_by_firstname
+    PeopleRepository.sort_by_firstname(people)
+  end
 end
