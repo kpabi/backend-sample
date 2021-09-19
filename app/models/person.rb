@@ -17,6 +17,8 @@ class Person
   def to_s
     "#{firstname}, #{full_city_name}, #{formatted_birthdate}"
   end
+  private
+  attr_reader :lastname, :city, :birthdate
 
   def formatted_birthdate
     birthdate.strftime('%-m/%-d/%Y')
@@ -25,8 +27,4 @@ class Person
   def full_city_name
     @@cities[city] || city
   end
-
-  private
-
-  attr_reader :lastname, :city, :birthdate
 end
