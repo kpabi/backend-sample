@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Parse person record files with columns separated by '$'
 module People
+  # Parse person record files with columns separated by '$'
   class DollarParser < BaseParser
     def parse_row(row)
       city, birthdate, lastname, firstname = row.split('$').map(&:strip)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Abstract class for parsing files with person records
 module People
+  # Abstract class for parsing files with person records
   class BaseParser
     attr_reader :raw_data
 
