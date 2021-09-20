@@ -16,6 +16,8 @@ module People
       people = []
       @rows = raw_data.split("\n")
       @rows[1..].each do |row|
+        row = row.strip
+        next unless row.length > 0
         person = parse_row(row)
         people << person
       end
